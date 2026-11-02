@@ -472,7 +472,7 @@ let db;
 try{db=initializeFirestore(app,{localCache:persistentLocalCache({tabManager:persistentMultipleTabManager()}),ignoreUndefinedProperties:true})}
 catch(e){try{db=initializeFirestore(app,{ignoreUndefinedProperties:true})}catch(e2){db=getFirestore(app)}}
 
-const lg=document.querySelector(".hd img");if(lg)$("#aimg").src=lg.src;
+$("#aimg").src="firma.png";
 const enc=u=>[...new TextEncoder().encode(u)].map(b=>b.toString(16).padStart(2,"0")).join("")+"@shopifyx.app";
 const dec=e=>{const h=e.split("@")[0];return new TextDecoder().decode(new Uint8Array(h.match(/../g).map(x=>parseInt(x,16))))};
 const pw=p=>p+"|sx26!";
